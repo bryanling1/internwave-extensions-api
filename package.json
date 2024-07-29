@@ -1,0 +1,26 @@
+{
+  "name": "@internwave/extensions-api",
+  "version": "1.0.0",
+  "description": "A helper API for extensions in the InternWave desktop application",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "internwave",
+    "uwwave",
+    "uwaterloo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ]
+}
