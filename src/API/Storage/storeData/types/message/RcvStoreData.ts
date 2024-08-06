@@ -3,8 +3,7 @@ import { MessageType } from "src/ipc/types/message/messageType";
 
 export interface IRcvStoreDataPayload{
     jobID: string,
-    key: string,
-    value: unknown
+    value: string
 }
 
 export interface IRcvStoreData extends IMessage<IRcvStoreDataPayload>{

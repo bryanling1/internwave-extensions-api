@@ -1,34 +1,30 @@
 import { IRcvStoreData } from "src/API/Storage/storeData/types/message/RcvStoreData";
-import { ISendStoreDataResult } from "src/API/Storage/storeData/types/message/SendStoreDataResult";
+import { messageApp } from "src/API/utils/messageApp/messageApp";
 import { MessageType } from "src/ipc/types/message/messageType";
 
-export const storeData = async (
+export const storeData = async <T extends object>(
     jobID: string,
-    key: string,
-    value: unknown
+    value: T
 ): Promise<void> => {
-    return new Promise<void>((resolve, reject) => {
-        if(!process.send){
-            reject(new Error('No IPC channel available'));
-            return;
+    const initMsg: IRcvStoreData = {
+        type: MessageType.RcvStoreData,
+        payload: {
+            jobID,
+            value: JSON.stringify(value)
         }
-        process.on('message', (message: ISendStoreDataResult) => {
+    }
+    return messageApp(
+        (message, resolve, reject) => {
             if(message.type === MessageType.SendStoreDataResult){
                 if(message.payload.succeeded){
                     resolve();
                 } else {
                     reject(new Error(message.payload.message));
                 }
+            }else{
+                reject(new Error('Unexpected message type'));
             }
-        })
-        const msg: IRcvStoreData = {
-            type: MessageType.RcvStoreData,
-            payload: {
-                jobID,
-                key,
-                value
-            }
-        }
-        process.send(msg)
-    })
+        },
+        initMsg
+    )
 }

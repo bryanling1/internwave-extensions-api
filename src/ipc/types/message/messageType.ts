@@ -3,4 +3,6 @@ export enum MessageType{
     RcvRenderTableCell = "RCV_RENDER_TABLE_CELL",
     SendStoreDataResult = "SEND_STORE_DATA_RESULT",
     RcvStoreData = "RCV_STORE_DATA",
+    RcvFetchData = "RCV_FETCH_DATA",
+    SendFetchData = "SEND_FETCH_DATA",
 }
