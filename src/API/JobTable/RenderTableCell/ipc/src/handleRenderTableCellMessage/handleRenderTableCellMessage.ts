@@ -3,8 +3,8 @@ import { IRcvRenderTableCellMessage } from "src/API/JobTable/RenderTableCell/ipc
 import { ISendRenderTableCellMessage } from "src/API/JobTable/RenderTableCell/ipc/types/SendRenderTableCellMessage";
 import { MessageType } from "src/ipc/types/message/messageType";
 
-export const handleRenderTableCellMessage = async (
-    APIs: IAPIs,
+export const handleRenderTableCellMessage = async <T extends object>(
+    APIs: IAPIs<T>,
     message: ISendRenderTableCellMessage
 ) => {
     if(!APIs.JobTableAPI?.onRenderTableCells) return;

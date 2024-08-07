@@ -2,5 +2,5 @@ import { ITableCellText } from "src/API/JobTable/RenderTableCell/types/TableCell
 
 export interface ITableCellButtonTooltip {
     title: ITableCellText,
-    subtitle?: ITableCellText
+    subtitles?: ITableCellText[]
 }

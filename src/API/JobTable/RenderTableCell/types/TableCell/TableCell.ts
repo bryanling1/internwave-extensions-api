@@ -1,7 +1,7 @@
 import { ITableCellElement } from "src/API/JobTable/RenderTableCell/types/TableCell/TableCellElement/TableCellElement";
 
 export enum TableCellElementType{
-    Button = "BUTTON",
+    IconButton = "ICON_BUTTON",
 }
 
 export interface ITableCell {

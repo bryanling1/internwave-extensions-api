@@ -1,5 +1,8 @@
 export enum TableCellButtonIcon {
-    CALENDAR = "CAELDNAR"
+    CALENDAR = "CAELDNAR",
+    NOTE = "NOTE",
+    CIRCLE = "CIRCLE",
+    ADD = "ADD"
 }
 
 export interface ITableCellButtonIcon {

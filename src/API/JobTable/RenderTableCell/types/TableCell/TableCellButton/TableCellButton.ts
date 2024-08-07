@@ -1,12 +1,10 @@
 import { TableCellElementType } from "src/API/JobTable/RenderTableCell/types/TableCell/TableCell"
-import { ITableCellButtonIcon, TableCellButtonIcon } from "src/API/JobTable/RenderTableCell/types/TableCell/TableCellButtonIcon/TableCellButtonIcon"
+import { ITableCellButtonIcon } from "src/API/JobTable/RenderTableCell/types/TableCell/TableCellButtonIcon/TableCellButtonIcon"
 import { ITableCellButtonTooltip } from "src/API/JobTable/RenderTableCell/types/TableCell/TableCellButtonTooltip/TableCellButtonTooltip"
 
-
-
-export interface ITableCellButton {
-    type: TableCellElementType.Button
+export interface ITableCellIconButton {
     id: string
+    type: TableCellElementType.IconButton
     icon: ITableCellButtonIcon
-    tooltip: ITableCellButtonTooltip
+    tooltip?: ITableCellButtonTooltip
 }
