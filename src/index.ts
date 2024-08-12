@@ -17,3 +17,6 @@ export * from "src/API/JobTable/RenderTableCell/types/TableCell/TableCellButton/
 export * from "src/API/JobTable/RenderTableCell/types/TableCell/TableCellButtonIcon/TableCellButtonIcon"
 export * from "src/API/JobTable/RenderTableCell/types/TableCell/TableCellButtonTooltip/TableCellButtonTooltip"
 export * from "src/API/JobTable/RenderTableCell/types/TableCell/TableCellText/TableCellText"
+export * from "src/API/JobTable/ButtonClick/ipc/types/SendButtonClickMessage"
+export * from "src/API/JobTable/ButtonClick/ipc/types/RcvButtonClickMessage"
+

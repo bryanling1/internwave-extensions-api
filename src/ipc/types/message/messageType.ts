@@ -5,4 +5,6 @@ export enum MessageType{
     RcvStoreData = "RCV_STORE_DATA",
     RcvFetchData = "RCV_FETCH_DATA",
     SendFetchData = "SEND_FETCH_DATA",
+    SendCellButtonClick = "SEND_BUTTON_CLICK",
+    RcvCellButtonClick = "RCV_BUTTON_CLICK",
 }

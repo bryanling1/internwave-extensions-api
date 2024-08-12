@@ -1,4 +1,3 @@
-import { ISendRenderTableCellMessagePayload } from "src/API/JobTable/RenderTableCell/ipc/types/SendRenderTableCellMessage"
 import { ITableCell } from "src/API/JobTable/RenderTableCell/types/TableCell/TableCell"
 
 export interface IJobTableAPI<T extends object> {
@@ -8,4 +7,11 @@ export interface IJobTableAPI<T extends object> {
             extensionData: Partial<T>
         }[]
     ) => Promise<ITableCell[]>
+    onButtonClick?: (
+        buttonID: string,
+        jobData: {
+            id: string,
+            extensionData: Partial<T>
+        }
+    ) => Promise<void>
 }
