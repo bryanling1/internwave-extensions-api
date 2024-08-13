@@ -1,12 +1,7 @@
-export enum TableCellButtonIcon {
-    CALENDAR = "CAELDNAR",
-    NOTE = "NOTE",
-    CIRCLE = "CIRCLE",
-    ADD = "ADD"
-}
+import { Icons } from "src/API/types/Icons/Icons";
 
 export interface ITableCellButtonIcon {
-    type: TableCellButtonIcon,
+    type: Icons,
     color?: string,
     text?: string
 }

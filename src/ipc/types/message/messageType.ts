@@ -7,4 +7,6 @@ export enum MessageType{
     SendFetchData = "SEND_FETCH_DATA",
     SendCellButtonClick = "SEND_BUTTON_CLICK",
     RcvCellButtonClick = "RCV_BUTTON_CLICK",
+    SendShowModal = "SEND_SHOW_MODAL",
+    RcvShowModal = "RCV_SHOW_MODAL",
 }

@@ -7,12 +7,12 @@ export const handleCellButtonClickMessage = async <T extends object>(
     APIs: IAPIs<T>,
     message: ISendCellButtonClickMessage
 ) => {
-    if(!APIs.JobTableAPI?.onButtonClick) return;
+    if(!APIs.JobTableAPI?.onCellButtonClick) return;
     const {
        buttonID,
        jobData
     } = message.payload
-    await APIs.JobTableAPI.onButtonClick(buttonID, {
+    await APIs.JobTableAPI.onCellButtonClick(buttonID, {
         id: jobData.id,
         extensionData: jobData.extensionData ? JSON.parse(jobData.extensionData) : {}
     })

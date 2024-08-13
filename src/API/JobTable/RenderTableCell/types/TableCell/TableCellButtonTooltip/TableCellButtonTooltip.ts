@@ -1,6 +1,5 @@
-import { ITableCellText } from "src/API/JobTable/RenderTableCell/types/TableCell/TableCellText/TableCellText";
-
+import { ITypography } from "src/API/types/Typography/Typography";
 export interface ITableCellButtonTooltip {
-    title: ITableCellText,
-    subtitles?: ITableCellText[]
+    title: ITypography,
+    subtitles?: ITypography[]
 }

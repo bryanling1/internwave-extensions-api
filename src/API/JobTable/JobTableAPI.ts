@@ -1,3 +1,4 @@
+import { IModal } from "src/API/JobTable/ShowModal/types/Modal/Modal"
 import { ITableCell } from "src/API/JobTable/RenderTableCell/types/TableCell/TableCell"
 
 export interface IJobTableAPI<T extends object> {
@@ -7,7 +8,7 @@ export interface IJobTableAPI<T extends object> {
             extensionData: Partial<T>
         }[]
     ) => Promise<ITableCell[]>
-    onButtonClick?: (
+    onCellButtonClick?: (
         buttonID: string,
         jobData: {
             id: string,
