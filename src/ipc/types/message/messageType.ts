@@ -9,4 +9,12 @@ export enum MessageType{
     RcvCellButtonClick = "RCV_BUTTON_CLICK",
     SendShowModal = "SEND_SHOW_MODAL",
     RcvShowModal = "RCV_SHOW_MODAL",
+    SendModalFormData = "SEND_MODAL_FORM_DATA",
+    RcvModalFormData = "RCV_MODAL_FORM_DATA",
+    SendModalTableRowClick = "SEND_MODAL_TABLE_ROW_CLICK",
+    RcvModalTableRowClick = "RCV_MODAL_TABLE_ROW_CLICK",
+    SendModalTableReorderClick = "SEND_MODAL_TABLE_REORDER_CLICK",
+    RcvModalTableReorderClick = "RCV_MODAL_TABLE_REORDER_CLICK",
+    SendModalButtonClick = "SEND_MODAL_BUTTON_CLICK",
+    RcvModalButtonClick = "RCV_MODAL_BUTTON_CLICK",
 }
