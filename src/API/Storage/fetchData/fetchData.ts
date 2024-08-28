@@ -13,7 +13,7 @@ export const fetchData = async <T extends object>(jobID: string): Promise<T> => 
     const handleMessage = (
         message: ExtensionSendMessage,
         resolve: (data: string) => void,
-        reject: (reason?: any) => void
+        reject: (reason?: Error) => void
     ) => {
         if(message.type === MessageType.SendFetchData){
             if(message.payload.error){

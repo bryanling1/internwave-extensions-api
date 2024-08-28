@@ -5,7 +5,7 @@ export const messageApp = async <T>(
     handleResponse: (
         message: ExtensionSendMessage,
         resolve: (data:T) => void,
-        reject: (reason?: any) => void
+        reject: (reason?: Error) => void
     ) => void,
     initMessage: ExtensionRcvMessage
 ) => {
